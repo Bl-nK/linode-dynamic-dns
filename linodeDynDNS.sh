@@ -7,7 +7,7 @@ api_key=$3
 ip_site=$4
 
 #Retrieve current public IP address
-current_IP=$(curl -s $ip_site)
+current_IP=$(curl -4 -s $ip_site)
 
 #Current DNS Record
 current_dns=$(curl -s "https://api.linode.com/?api_key=$api_key&api_action=domain.resource.list&DomainID=$domainID&ResourceID=$resourceID")
